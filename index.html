@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Script Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+    <div class="container">
+        <header>
+            <h1>TikTok Script Generator</h1>
+            <button id="themeToggle">🌙</button>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea 
+                    id="productDescription" 
+                    placeholder="Describe your product/service in detail..."
+                ></textarea>
+                
+                <div class="controls">
+                    <div class="style-language-container">
+                        <div class="style-selector">
+                            <label for="toneStyle">Tone/Style:</label>
+                            <select id="toneStyle">
+                                <option value="casual">Casual & Friendly</option>
+                                <option value="professional">Professional & Formal</option>
+                                <option value="humorous">Funny & Entertaining</option>
+                                <option value="educational">Educational & Informative</option>
+                                <option value="persuasive">Persuasive & Convincing</option>
+                            </select>
+                        </div>
+                        
+                        <div class="language-selector">
+                            <label for="outputLanguage">Language:</label>
+                            <select id="outputLanguage">
+                                <option value="english">English</option>
+                                <option value="malay">Bahasa Malaysia</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="slider-container">
+                        <label for="videoLength">Video Length: <span id="lengthValue">30s</span></label>
+                        <input 
+                            type="range" 
+                            id="videoLength" 
+                            min="10" 
+                            max="60" 
+                            step="10" 
+                            value="30"
+                        >
+                    </div>
+                    
+                    <div class="api-key-section">
+                        <input 
+                            type="password" 
+                            id="apiKey" 
+                            placeholder="Enter OpenRouter API Key"
+                        >
+                        <button id="saveApiKey">Save Key</button>
+                        <button id="resetApiKey">Reset Key</button>
+                    </div>
+                    
+                    <button id="generateButton" class="primary-button">Generate Scripts</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="progress-bar hidden">
+                    <div class="progress"></div>
+                </div>
+                
+                <div class="scripts-container">
+                    <div class="script-variant hidden">
+                        <div class="script-header">
+                            <h3 class="script-title">Generated Script</h3>
+                            <button class="copy-button" title="Copy to clipboard">
+                                <span class="copy-icon">📋</span>
+                                <span class="copy-text">Copy</span>
+                            </button>
+                        </div>
+                        <div class="script-segments">
+                            <div class="segment">
+                                <div class="segment-header">Hook Headline</div>
+                                <div class="segment-content" id="hookHeadlineContent"></div>
+                            </div>
+                            <div class="segment">
+                                <div class="segment-header">Hook Script (0-3s)</div>
+                                <div class="segment-content" id="hookContent"></div>
+                            </div>
+                            <div class="segment">
+                                <div class="segment-header">Problem Statement</div>
+                                <div class="segment-content" id="problemContent"></div>
+                            </div>
+                            <div class="segment">
+                                <div class="segment-header">Solution</div>
+                                <div class="segment-content" id="solutionContent"></div>
+                            </div>
+                            <div class="segment">
+                                <div class="segment-header">Call to Action</div>
+                                <div class="segment-content" id="ctaContent"></div>
+                            </div>
+                            <div class="segment">
+                                <div class="segment-header">Caption</div>
+                                <div class="segment-content" id="captionContent"></div>
+                            </div>
+                            <div class="segment">
+                                <div class="segment-header">Hashtags</div>
+                                <div class="segment-content" id="hashtagsContent"></div>
+                            </div>
+                            <div class="segment">
+                                <div class="segment-header">SEO Keywords</div>
+                                <div class="segment-content" id="seoContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 hanafihassan.com - All Rights Reserved</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
