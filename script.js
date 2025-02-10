@@ -201,10 +201,16 @@ Language: ${languagePrompt}
 ===== START OF SCRIPT =====
 
 HOOK HEADLINE:
-[Write an attention-grabbing title, max 60 characters]
+[Write a short, attention-grabbing title that creates curiosity or promises value]
 
 HOOK:
-[Write a 3-second attention-grabbing opening]
+[Create a powerful 1-3 second opening that immediately grabs attention. Consider these hook types:
+- Shocking statement or statistic
+- Controversial or unexpected opening
+- Direct question to viewer
+- "Wait until you see this" moment
+- Pattern interrupt
+The hook must stop the scroll and make viewers want to keep watching. Be specific and compelling.]
 
 PROBLEM:
 [Describe the main problem or pain point]
@@ -227,10 +233,11 @@ HASHTAGS:
 ===== END OF SCRIPT =====
 
 Important: 
-1. Keep the exact section headers as shown above
-2. Include content for ALL sections
-3. Do not add any additional sections
-4. Do not skip any sections`;
+1. The hook must be extremely compelling and work within the first 1-3 seconds
+2. Use pattern interrupts or curiosity gaps to stop the scroll
+3. Keep the exact section headers as shown above
+4. Include content for ALL sections
+5. Make it conversational and authentic`;
     }
 
     displayScript(content) {
